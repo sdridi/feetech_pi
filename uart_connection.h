@@ -1,7 +1,7 @@
 #ifndef UART_CONNECTION_H
 #define UART_CONNECTION_H
 
-#include <csrdint>
+#include <stdint.h>
 #include <stdio.h>
 #include <unistd.h>			//Used for UART
 #include <fcntl.h>			//Used for UART
