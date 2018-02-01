@@ -6,7 +6,7 @@ UARTConnection::UARTConnection() {
 
 }
 
-void UARTConnection::send(uint8_t[] array, int size) {
+void UARTConnection::send(uint8_t array[], int size) {
     //----- TX BYTES -----
 	unsigned char tx_buffer[20];
 	unsigned char *p_tx_buffer;
