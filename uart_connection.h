@@ -18,7 +18,7 @@ class UARTConnection {
 
     void connect();
 
-    void send(uint8_t byteArray[], int size);
+    void send(const uint8_t byteArray[], int size);
 
 
 };
