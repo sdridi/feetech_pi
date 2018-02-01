@@ -7,11 +7,12 @@
 #include <fcntl.h>			//Used for UART
 #include <termios.h>		//Used for UART
 
+
 class UARTConnection {
     
 
 
-    private: 
+    private:
     public:
     UARTConnection();
 

@@ -1,4 +1,6 @@
 #include "uart_connection.h"
+#include <iostream>       // std::cout
+#include <thread>         // std::thread
 
 UARTConnection::UARTConnection() {
 
@@ -94,4 +96,14 @@ void UARTConnection::connect() {
 	options.c_lflag = 0;
 	tcflush(uart0_filestream, TCIFLUSH);
 	tcsetattr(uart0_filestream, TCSANOW, &options);
+
+	std::thread uart(read, this);
+}
+
+void read(UARTConnection uartConnection) {
+	while(true) {
+
+		UARTConnection.read();
+		usleep(20);
+	}
 }
