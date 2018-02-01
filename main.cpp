@@ -13,7 +13,7 @@ int main(int argc, char **argv) {
         cout << "Please enter a message: " << endl;
         cin >> data;
 
-        uartConnection.write(data.c_str(), data.length());
+        uartConnection.send(data.c_str(), data.length());
     }
     return 0;
 }
