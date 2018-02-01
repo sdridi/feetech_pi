@@ -1,11 +1,16 @@
 CC=gcc
 CXX=g++
 RM=rm -f
+CPPFLAGS=-g $(shell root-config --cflags)
+LDFLAGS=-g $(shell root-config --ldflags)
+LDLIBS=$(shell root-config --libs)
+SRCS=main.cpp servo.cpp servo_manager.cpp uart_connection.cpp
+OBJS=$(subst .cpp,.o,$(SRCS))
 
-all: tool
+all: main
 
-a: $(OBJS)
-    $(CXX) $(LDFLAGS) -o tool $(OBJS) $(LDLIBS) 
+main: $(OBJS)
+    $(CXX) $(LDFLAGS) -o main $(OBJS) $(LDLIBS) 
 
 main.o: main.cpp
 
